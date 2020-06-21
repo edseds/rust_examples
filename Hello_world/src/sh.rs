@@ -23,5 +23,7 @@ pub fn stack_and_heap()
     let p3 = *p2;
     println!("{}",p3.x);
 
+    
+
 
 }
