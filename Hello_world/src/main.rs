@@ -1,7 +1,10 @@
+
+
 #![allow(dead_code)]
 use std::mem;
 mod sh;
-mod combinationLock;
+mod combination_locks;
+mod data_structures;
 
 
 const MEANING_OF_LIFE: u8 = 42;
@@ -37,7 +40,12 @@ fn main() {
     //for_loop();
     //match_statement();
 
-    combinationLock::combination_lock();
+    //combinationLock::combination_lock();
+    //dataStructures::structures();
+    data_structures::enums();
+    data_structures::unions();
+    data_structures::option_of_t();
+    data_structures::arrays();
 
 }
 
@@ -84,7 +92,7 @@ fn data_types() {
     //true false
     let g = false;
     println!("g={}, size = {} bytes", g, mem::size_of_val(&g));
-    let f = 4 > 0; //true
+    let _f = 4 > 0; //true
 }
 
 fn operators() {
