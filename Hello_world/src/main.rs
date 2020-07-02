@@ -1,8 +1,7 @@
-
-
 #![allow(dead_code)]
 use std::mem;
 mod sh;
+mod pm;
 mod combination_locks;
 mod data_structures;
 
@@ -46,7 +45,10 @@ fn main() {
     data_structures::unions();
     data_structures::option_of_t();
     data_structures::arrays();
-
+    data_structures::slices();
+    data_structures::tuples();
+    pm::pattern_matching();
+    data_structures::generics();
 }
 
 fn data_types() {

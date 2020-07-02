@@ -136,5 +136,77 @@ pub fn arrays()
             }
         }
     }
+}
 
+pub fn slices()
+{
+    let mut data = [1,2,3,4,5];
+    use_slice(&mut data[1..4]);
+    //use_slice(&mut data);
+
+    println!("{:?}",data);
+}
+
+fn use_slice(slice: &mut[i32])
+{
+    println!("first elem = {}, len = {}",slice[0],slice.len());
+    slice[0]=6666;
+}
+
+
+pub fn tuples()
+{
+    let x = 3;
+    let y = 4;
+    let sp = sum_and_product(x, y);
+
+    println!("sp= {:?}", sp);
+    println!("{0} + {1} = {2}, {0} * {1} = {3}", x, y, sp.0, sp.1);
+
+    //desctucturing
+    let (a, b) = sp;
+    println!("a = {}, b = {}", a, b);
+
+    let sp2 = sum_and_product(4,7);
+    let combined = (sp,sp2);
+
+    println!("{:?}",combined);
+
+    println!("last elem = {}",(combined.1).1);
+
+    let((c,d),(e,f)) = combined;
+
+    let foo = (true,42.9,-1i8);
+
+    println!("{:?}",foo);
+
+    let meaning = (42,);
+    println!("{:?}",42);
+
+
+}
+
+fn sum_and_product(x:i32, y:i32) -> (i32,i32)
+{
+    (x + y, x * y)
+}
+
+//Option<T>
+struct SecondPoint<T> {
+    x:T,
+    y:T
+}
+struct SecondLine<T>
+{
+    start: SecondPoint<T>,
+    end: SecondPoint<T>
+}
+
+
+pub fn generics()
+{
+    let a = SecondPoint { x: 0.0, y: 5.8 };
+    let b = SecondPoint { x: 1.2, y: 3.5 };
+
+    let myline = SecondLine { start: a, end: b };
 }
