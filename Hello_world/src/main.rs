@@ -4,6 +4,8 @@ mod sh;
 mod pm;
 mod combination_locks;
 mod data_structures;
+mod collections;
+
 
 
 const MEANING_OF_LIFE: u8 = 42;
@@ -49,6 +51,9 @@ fn main() {
     data_structures::tuples();
     pm::pattern_matching();
     data_structures::generics();
+    collections::vectors();
+    collections::hash_map();
+    collections::hash_set();
 }
 
 fn data_types() {
