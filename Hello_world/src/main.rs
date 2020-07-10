@@ -5,6 +5,7 @@ mod pm;
 mod combination_locks;
 mod data_structures;
 mod collections;
+mod strings;
 
 
 
@@ -54,6 +55,9 @@ fn main() {
     collections::vectors();
     collections::hash_map();
     collections::hash_set();
+    strings::strings();
+    strings::string_format();
+    strings::number_guessing();
 }
 
 fn data_types() {
