@@ -1,12 +1,14 @@
 #![allow(dead_code)]
 use std::mem;
+
 mod sh;
 mod pm;
 mod combination_locks;
 mod data_structures;
 mod collections;
 mod strings;
-
+mod functions;
+mod methods;
 
 
 const MEANING_OF_LIFE: u8 = 42;
@@ -35,7 +37,7 @@ fn main() {
         operators();
         scope_and_shadowing();
     */
-   // sh::stack_and_heap();
+    // sh::stack_and_heap();
     //if_statement();
     //while_and_loop();
 
@@ -57,7 +59,24 @@ fn main() {
     collections::hash_set();
     strings::strings();
     strings::string_format();
-    strings::number_guessing();
+    //strings::number_guessing();
+    functions::print_value(20);
+
+    let mut z = 1;
+    functions::increase(&mut z);
+
+    println!("Value = {}", z);
+
+    let a = 3;
+    let b = 5;
+    let p = functions::product(a, b);
+
+    println!("{} * {} = {}", a, b, p);
+
+
+    methods::methods();
+    functions::closure();
+    functions::higher_order_functions();
 }
 
 fn data_types() {
