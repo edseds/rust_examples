@@ -9,6 +9,10 @@ mod collections;
 mod strings;
 mod functions;
 mod methods;
+mod traits;
+mod trait_params;
+mod into_trait;
+mod drop_trait;
 
 
 const MEANING_OF_LIFE: u8 = 42;
@@ -77,6 +81,12 @@ fn main() {
     methods::methods();
     functions::closure();
     functions::higher_order_functions();
+
+    traits::traits();
+    trait_params::trait_params();
+    into_trait::into_trait();
+    drop_trait::drop_trait();
+
 }
 
 fn data_types() {
